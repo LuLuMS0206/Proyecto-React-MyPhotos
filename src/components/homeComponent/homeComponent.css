@@ -1,0 +1,12 @@
+.home__content__title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    color: rgba(217, 217, 217, 1);
+    margin-top: 4rem;
+}
+
+.home__content__icon{
+    background: white;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}

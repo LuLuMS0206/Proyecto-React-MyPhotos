@@ -1,0 +1,17 @@
+.navbar__content__background{
+    line-height: 0.1rem;
+    background-color: rgba(34, 34, 34, 1);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.navbar__content__logo{
+    color: rgba(217, 217, 217, 1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar__content__text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.5rem;
+    color: rgba(217, 217, 217, 1);
+}
