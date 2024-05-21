@@ -1,11 +1,11 @@
+import './imgComponent.css'
 
-
-export const ImgComponent = () => {
+export const ImgComponent = (props) => {
 
     return (
 
-        <div >
-    {/* <img src={props.urls.small} alt="" /> */}
+        <div className="img__content">
+            <img className="img__contentImage" src={props.image} />
         </div>
 
     )

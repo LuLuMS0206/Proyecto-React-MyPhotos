@@ -23,7 +23,7 @@ export const searchPhotosThunk = createAsyncThunk(
                 "Authorization": "Client-ID h9Uv1T3F_36nJcRw5hM0Wgeme8JVAHyJpx8zrMCuAew"
             }
         });
-        const data = await response.json();
-        return data.results;  
+        const dataSearch = await response.json();
+        return dataSearch.results;  
     }
 );

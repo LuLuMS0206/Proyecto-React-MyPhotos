@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { SearchThunk } from "../features/search/searchThunk"
 import { HeaderComponent } from '../components/headerComponent/headerComponent';
+import { ImgComponent } from '../components/imgComponent/imgComponent';
 
 
 export const SearchPage = () => {
@@ -36,7 +37,11 @@ export const SearchPage = () => {
             {loading ? <p>Loading...</p> : (
                 <div className='img__content'>
                     {imagenes.map(imagen => (
-                        <img src={imagen.urls.small} alt="" />
+                        <ImgComponent
+
+                        key={imagen.id} image={imagen.urls.small}
+
+                        />
                     ))}
                 </div>
             )}

@@ -1,0 +1,10 @@
+
+@media only screen and (min-width: 750px){
+    .img__content{
+        width: 100%;
+    }
+    
+    .img__contentImage{
+        width: auto;
+    }
+}
