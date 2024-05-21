@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { Store } from './store/store.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import {HomeComponent} from '../src/components/homeComponent/homeComponent.jsx'
 import { StructureComponent } from './components/structureComponent/structureComponent.jsx'
 import './styles.css'
+import { SearchPage } from './pages/searchPage.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={Store}>
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<StructureComponent />}>
-          <Route path='' element={<HomeComponent />} />
-          
+          <Route element={<StructureComponent />}>
+            <Route path='' element={<SearchPage />} />
+
           </Route>
         </Routes>
       </BrowserRouter>

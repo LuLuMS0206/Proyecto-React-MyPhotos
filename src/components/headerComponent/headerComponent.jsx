@@ -1,7 +1,7 @@
 
-import './homeComponent.css'
+import './headerComponent.css'
 
-export const HomeComponent = () => {
+export const HeaderComponent = () => {
 
     return (
 
@@ -18,4 +18,5 @@ export const HomeComponent = () => {
 
     )
 }
+
 

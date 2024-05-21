@@ -6,11 +6,11 @@ export const StructureComponent = () => {
 
     return (
 
-        <div >
+        < >
             <NavbarComponent />
             <Outlet />
             <FooterComponent />
-        </div>
+        </>
 
     )
 }

@@ -1,0 +1,49 @@
+import './styles.css'
+import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { SearchThunk } from "../features/search/searchThunk"
+import { HeaderComponent } from '../components/headerComponent/headerComponent';
+
+
+export const SearchPage = () => {
+
+
+    const [imagenes, setImagenes] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch()
+    const Img = useSelector((state) => state.search.data)
+    const ImgStatus = useSelector((state) => state.search.status)
+
+
+    useEffect(() => {
+        console.log(ImgStatus)
+        if (ImgStatus === 'idle') {
+            dispatch(SearchThunk())
+        } else if (ImgStatus === 'pending') {
+            setLoading(true)
+        } else if (ImgStatus === 'fulfilled') {
+            setLoading(false)
+            setImagenes(Img)
+        } else {
+            alert("error")
+        }
+
+    }, [ImgStatus, Img, dispatch]);
+    return (
+
+        <>
+            <HeaderComponent />
+            {loading ? <p>Loading...</p> : (
+                <div className='img__content'>
+                    {imagenes.map(imagen => (
+                        <img src={imagen.urls.small} alt="" />
+                    ))}
+                </div>
+            )}
+        </>
+    );
+};
+
+
+
+

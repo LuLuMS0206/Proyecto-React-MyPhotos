@@ -19,7 +19,7 @@ export const searchSlice = createSlice({
         builder
             .addCase(SearchThunk.pending, (state, action) => {
                 state.status = 'pending';
-                state.data = action.payload;
+                
             })
             .addCase(SearchThunk.fulfilled, (state, action) => {
                 state.status = 'fulfilled';
@@ -28,7 +28,7 @@ export const searchSlice = createSlice({
             .addCase(SearchThunk.rejected, (state, action) => {
                 state.status = 'rejected';
                 state.error = '';
-                state.data = action.payload;
+            
             })
     
     }
