@@ -1,5 +1,5 @@
 
-import { Outlet } from "react-router-dom"
+
 import  './navbarComponent.css'
 
 
@@ -18,7 +18,7 @@ export const NavbarComponent = () => {
 
             </nav>
 
-            <Outlet />
+            
 
         </>
     )
