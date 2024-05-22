@@ -33,7 +33,7 @@ export const SearchPage = () => {
     return (
 
         <>
-            <HeaderComponent />
+            <HeaderComponent titleSearch={true} inputSearch={true} linkSearch={true}/>
             {loading ? <p>Loading...</p> : (
                 <div className='img__contentGrid'>
                     {imagenes.map(imagen => (

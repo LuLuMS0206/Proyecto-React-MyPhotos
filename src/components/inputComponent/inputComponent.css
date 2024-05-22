@@ -1,0 +1,37 @@
+
+
+.home__content__input{
+    background: white;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    width: 65%;
+}
+
+
+.home__content__icon{
+    color:  rgba(34, 34, 34, 1);
+    transform: translate(-128%, 36%);
+}
+
+.home__content__icon:hover{
+    cursor: pointer;
+
+}
+
+@media only screen and (min-width: 750px){
+
+
+    .home__content__input{
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .home__content__icon{
+        transform: translate(-167%, 36%);
+    }
+
+    
+}
