@@ -35,7 +35,7 @@ export const SearchPage = () => {
         <>
             <HeaderComponent />
             {loading ? <p>Loading...</p> : (
-                <div className='img__content'>
+                <div className='img__contentGrid'>
                     {imagenes.map(imagen => (
                         <ImgComponent
 

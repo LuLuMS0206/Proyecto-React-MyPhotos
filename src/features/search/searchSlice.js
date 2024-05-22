@@ -2,6 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 import {SearchThunk } from "./searchThunk";
+import {searchPhotosThunk} from "./searchThunk";
 
 export const searchSlice = createSlice({
     name: 'search',
@@ -17,20 +18,28 @@ export const searchSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(SearchThunk.pending, (state, action) => {
+            .addCase(SearchThunk.pending, (state) => {
                 state.status = 'pending';
-                
             })
             .addCase(SearchThunk.fulfilled, (state, action) => {
                 state.status = 'fulfilled';
                 state.data = action.payload;
             })
             .addCase(SearchThunk.rejected, (state, action) => {
-                state.status = 'rejected';
-                state.error = '';
-            
+                state.status = 'failed';
+                state.error = action.error.message;
             })
-    
+            .addCase(searchPhotosThunk.pending, (state) => {
+                state.status = 'pending';
+            })
+            .addCase(searchPhotosThunk.fulfilled, (state, action) => {
+                state.status = 'fulfilled';
+                state.data = action.payload;
+            })
+            .addCase(searchPhotosThunk.rejected, (state, action) => {
+                state.status = 'failed';
+                state.error = action.error.message;
+            });
     }
 });
 

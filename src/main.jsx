@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { StructureComponent } from './components/structureComponent/structureComponent.jsx'
 import './styles.css'
 import { SearchPage } from './pages/searchPage.jsx'
+import {MyPhotosPage} from './pages/myPhotosPage.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -15,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route element={<StructureComponent />}>
             <Route path='' element={<SearchPage />} />
-
+            <Route path='myPhotos' element={<MyPhotosPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

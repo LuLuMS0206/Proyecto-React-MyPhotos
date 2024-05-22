@@ -1,10 +1,26 @@
 
 @media only screen and (min-width: 750px){
-    .img__content{
-        width: 100%;
-    }
     
     .img__contentImage{
-        width: auto;
+        padding: 0;
     }
+
+    
+}
+
+.img__contentImage{
+    width: 100%;
+    /* padding-bottom: 0.5rem; */
+}
+
+.img__contentIcons{
+    background:  rgba(77, 77, 77, 0.69);
+    color:   rgba(217, 217, 217, 1);
+    transform: translateY(-32px);
+}
+
+
+.img__contentIcons__star{
+    margin-right: 1rem;
+    margin-left: 1rem;
 }

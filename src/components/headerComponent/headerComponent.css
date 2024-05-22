@@ -2,6 +2,10 @@
     margin-left: 2rem;
 }
 
+.home__content__flex{
+    display: flex;
+    justify-content: space-between;
+}
 
 .home__content__title{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -9,6 +13,16 @@
     color: rgba(217, 217, 217, 1);
     margin-top: 1rem;
 }
+
+.home__content__titleFav{
+    text-decoration: none;
+    color: rgba(217, 217, 217, 1);
+    margin-top: 1rem;
+    margin-right: 2rem;
+    font-size: 0.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 .home__content__input{
     background: white;
@@ -44,4 +58,9 @@
     .home__content__icon{
         transform: translate(-167%, 36%);
     }
+
+    .home__content__titleFav{
+        font-size: 1.2rem;
+    }
+    
 }
