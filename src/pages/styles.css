@@ -11,3 +11,10 @@
         gap: 1rem;
     }
 }
+
+.myPhotos__content__icon{
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}

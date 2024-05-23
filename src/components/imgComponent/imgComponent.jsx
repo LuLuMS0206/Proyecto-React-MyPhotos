@@ -1,7 +1,8 @@
+import { saveAs } from 'file-saver'
 import './imgComponent.css'
 
 export const ImgComponent = (props) => {
-
+console.log(props)
     return (
         <div>
             <img className="img__contentImage" src={props.image} />
@@ -9,16 +10,15 @@ export const ImgComponent = (props) => {
                 <span className="material-symbols-outlined img__contentIcons__star">
                     star
                 </span>
-                <span className="material-symbols-outlined">
+            
+            
+                <span onClick={()=>saveAs(props.image) } className="material-symbols-outlined">
                     download
                 </span>
+            
+                
+                
             </div>
-
-
         </div>
-
-
-
-
     )
 }

@@ -25,9 +25,7 @@ export const SearchPage = () => {
         } else if (ImgStatus === 'fulfilled') {
             setLoading(false)
             setImagenes(Img)
-        } else {
-            alert("error")
-        }
+        } 
 
     }, [ImgStatus, Img, dispatch]);
     return (
@@ -39,7 +37,9 @@ export const SearchPage = () => {
                     {imagenes.map(imagen => (
                         <ImgComponent
 
-                        key={imagen.id} image={imagen.urls.small}
+                        key={imagen.id} 
+                        image={imagen.urls.small} 
+            
 
                         />
                     ))}

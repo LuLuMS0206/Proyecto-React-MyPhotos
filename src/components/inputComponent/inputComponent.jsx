@@ -8,7 +8,7 @@ export const InputSearchComponent = () => {
 
     const submit = (event) => {
         event.preventDefault();
-        const query = event.target.elements.search.value;
+        const query = event.target.search.value;
         if (query === '') {
             dispatch(SearchThunk());
         } else {
