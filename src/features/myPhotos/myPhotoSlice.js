@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const MyPhotosSlice = createSlice({
+export const MyPhotosSlice = createSlice({
     name: 'Favorites',
     initialState: {
         status: 'idle',
@@ -17,5 +17,4 @@ const MyPhotosSlice = createSlice({
     }
 })
 
-export default MyPhotosSlice;
 export const { addFavorite, removeFavorite } = MyPhotosSlice.actions;

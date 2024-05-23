@@ -24,3 +24,13 @@
     margin-right: 1rem;
     margin-left: 1rem;
 }
+
+.img__contentIcons__star:hover{
+    cursor: pointer;
+color: white;
+}
+
+.img__contentIcons__download:hover{
+cursor: pointer;
+color: white;
+}

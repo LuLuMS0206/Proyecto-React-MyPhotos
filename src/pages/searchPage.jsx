@@ -6,6 +6,7 @@ import { HeaderComponent } from '../components/headerComponent/headerComponent';
 import { ImgComponent } from '../components/imgComponent/imgComponent';
 
 
+
 export const SearchPage = () => {
 
 
@@ -14,6 +15,7 @@ export const SearchPage = () => {
     const dispatch = useDispatch()
     const Img = useSelector((state) => state.search.data)
     const ImgStatus = useSelector((state) => state.search.status)
+
 
 
     useEffect(() => {
@@ -39,7 +41,10 @@ export const SearchPage = () => {
 
                         key={imagen.id} 
                         image={imagen.urls.small} 
-            
+                        // sizeHeight={imagen.height}
+                        // sizeWidth={imagen.width}
+                        // like={imagen.likes}
+                        // description={imagen.description}
 
                         />
                     ))}
