@@ -27,24 +27,25 @@ export const SearchPage = () => {
         } else if (ImgStatus === 'fulfilled') {
             setLoading(false)
             setImagenes(Img)
-        } 
+        }
 
     }, [ImgStatus, Img, dispatch]);
     return (
 
         <>
-            <HeaderComponent titleSearch={true} inputSearch={true} linkSearch={true}/>
+            <HeaderComponent titleSearch={true} inputSearch={true} linkSearch={true} />
             {loading ? <p>Loading...</p> : (
                 <div className='img__contentGrid'>
                     {imagenes.map(imagen => (
-                        <ImgComponent
+                        <ImgComponent buttonSearch ={true}
 
-                        key={imagen.id} 
-                        image={imagen.urls.small} 
-                        // sizeHeight={imagen.height}
-                        // sizeWidth={imagen.width}
-                        // like={imagen.likes}
-                        // description={imagen.description}
+                            key={imagen.id}
+                            image={imagen.urls.small}
+                            sizeHeight={imagen.height}
+                            sizeWidth={imagen.width}
+                            like={imagen.likes}
+                            date={imagen.created_at}
+                            description={imagen.alt_description}
 
                         />
                     ))}
