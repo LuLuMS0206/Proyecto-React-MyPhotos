@@ -1,9 +1,15 @@
+
+
+
 import { saveAs } from 'file-saver';
 import './imgComponent.css';
 import { useDispatch } from 'react-redux';
-import { addFavorite } from '../../features/myPhotos/myPhotoSlice';
+import { addFavorite, removeFavorite } from '../../features/myPhotos/myPhotoSlice';
+import { ModalComponent } from '../modalComponent/modalComponent';
+import { useState } from 'react';
 
 export const ImgComponent = (props) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const dispatch = useDispatch();
 
     const addFavoriteHandler = () => {
@@ -14,6 +20,20 @@ export const ImgComponent = (props) => {
             date: props.date,
             image: props.image,
         }));
+    };
+
+    const removeFavoriteHandler = () => {
+        dispatch(removeFavorite({
+            id: props.id,  
+        }));
+    };
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
     };
 
     return (
@@ -30,11 +50,15 @@ export const ImgComponent = (props) => {
                 </div>
             ) : (
                 <div className='img__contentIcons'>
-                    <span className="material-symbols-outlined img__contentIcons__star">
+                    <span onClick={removeFavoriteHandler} className="material-symbols-outlined img__contentIcons__delete">
                         delete
+                    </span>
+                    <span onClick={openModal} className="material-symbols-outlined img__contentIcons__edit">
+                        edit
                     </span>
                 </div>
             )}
+            <ModalComponent isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 };
