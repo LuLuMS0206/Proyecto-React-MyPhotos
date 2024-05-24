@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { SearchThunk } from '../../features/search/searchThunk'
 import { searchPhotosThunk } from '../../features/search/searchThunk'
+import { useState } from 'react';
 import './inputComponent.css'
 
 export const InputSearchComponent = () => {
@@ -26,14 +27,33 @@ export const InputSearchComponent = () => {
     );
 };
 
+export const InputSearchDescriptionComponent = ({ handleSearch }) => {
+    const [query, setQuery] = useState('');
 
-export const InputSearchDescriptionComponent = () => {
+    const handleChange = (e) => {
+        setQuery(e.target.value);
+        handleSearch(e.target.value);
+    };
+
     return (
         <div>
-            <input className='home__content__input' type="text" placeholder='search your picture description...' />
-            <span className="material-symbols-outlined home__content__icon">
+            <input 
+                className='home__content__input' 
+                type="text" 
+                placeholder='search your picture description......' 
+                value={query}
+                onChange={handleChange}
+            />
+            <span 
+                className="material-symbols-outlined home__content__icon"
+                onClick={() => handleSearch(query)}
+            >
                 search
             </span>
         </div>
     );
-}
+};
+
+
+
+

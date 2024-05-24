@@ -1,6 +1,4 @@
 
-
-
 import { saveAs } from 'file-saver';
 import './imgComponent.css';
 import { useDispatch } from 'react-redux';
@@ -19,13 +17,16 @@ export const ImgComponent = (props) => {
             likes: props.like,
             date: props.date,
             image: props.image,
+            id: props.id,
         }));
     };
 
     const removeFavoriteHandler = () => {
-        dispatch(removeFavorite({
-            id: props.id,  
-        }));
+        console.log(props.id)
+        dispatch(removeFavorite(
+    
+            props.id  
+        ));
     };
 
     const openModal = () => {
@@ -50,10 +51,10 @@ export const ImgComponent = (props) => {
                 </div>
             ) : (
                 <div className='img__contentIcons'>
-                    <span onClick={removeFavoriteHandler} className="material-symbols-outlined img__contentIcons__delete">
+                    <span onClick={removeFavoriteHandler}  className="material-symbols-outlined img__contentIcons__delete">
                         delete
                     </span>
-                    <span onClick={openModal} className="material-symbols-outlined img__contentIcons__edit">
+                    <span onClick={openModal}  className="material-symbols-outlined img__contentIcons__edit">
                         edit
                     </span>
                 </div>

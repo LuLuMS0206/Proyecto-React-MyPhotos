@@ -12,7 +12,8 @@ export const FavoritesSlice = createSlice({
             state.data.push(action.payload);
         },
         removeFavorite: (state, action) => {
-            state.data = state.data.filter(image => image.id !== action.payload.id);
+            console.log(action.payload)
+            state.data = state.data.filter(image => image.id !== action.payload);
         }
     }
 })

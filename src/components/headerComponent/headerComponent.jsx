@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import './headerComponent.css'
 import { InputSearchComponent } from '../inputComponent/inputComponent'
-import { InputSearchDescriptionComponent } from '../inputComponent/inputComponent'
+
 
 
 
@@ -28,7 +28,8 @@ export const HeaderComponent = (props) => {
                 </NavLink>
             </div>
 
-            {props.inputSearch ? <InputSearchComponent /> : <InputSearchDescriptionComponent />}
+            {props.inputSearch ? <InputSearchComponent /> : <p> </p>}
+            
 
 
         </div>

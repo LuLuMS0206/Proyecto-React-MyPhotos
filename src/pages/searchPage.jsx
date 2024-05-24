@@ -35,6 +35,7 @@ export const SearchPage = () => {
                     {imagenes.map(imagen => (
                         <ImgComponent
                             key={imagen.id}
+                            id={imagen.id}
                             image={imagen.urls.small}
                             sizeHeight={imagen.height}
                             sizeWidth={imagen.width}
