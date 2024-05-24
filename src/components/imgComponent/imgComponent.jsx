@@ -58,7 +58,14 @@ export const ImgComponent = (props) => {
                     </span>
                 </div>
             )}
-            <ModalComponent isOpen={isModalOpen} onClose={closeModal} />
+            <ModalComponent 
+            isOpen={isModalOpen} 
+            onClose={closeModal} 
+            sizeHeight={props.height}
+            sizeWidth={props.width}
+            like={props.likes}
+            date={props.created_at}
+            description={props.alt_description} />
         </div>
     );
 };
