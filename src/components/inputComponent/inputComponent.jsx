@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SearchThunk } from '../../features/search/searchThunk'
 import { searchPhotosThunk } from '../../features/search/searchThunk'
 import { useState } from 'react';
@@ -29,22 +29,26 @@ export const InputSearchComponent = () => {
 
 export const InputSearchDescriptionComponent = ({ handleSearch }) => {
     const [query, setQuery] = useState('');
+    const select = useSelector((state) => state.Favorites.data);
+
 
     const handleChange = (e) => {
-        setQuery(e.target.value);
-        handleSearch(e.target.value);
+        const query = e.target.value
+        setQuery(query)
+        const imgDescriptionSearch = select.filter(imagen => imagen.description.includes(query))
+        handleSearch(imgDescriptionSearch)
     };
 
     return (
         <div>
-            <input 
-                className='home__content__input' 
-                type="text" 
-                placeholder='search your picture description......' 
+            <input
+                className='home__content__input'
+                type="text"
+                placeholder='search your picture description......'
                 value={query}
                 onChange={handleChange}
             />
-            <span 
+            <span
                 className="material-symbols-outlined home__content__icon"
                 onClick={() => handleSearch(query)}
             >
