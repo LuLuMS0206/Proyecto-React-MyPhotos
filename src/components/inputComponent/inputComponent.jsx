@@ -27,36 +27,6 @@ export const InputSearchComponent = () => {
     );
 };
 
-// export const InputSearchDescriptionComponent = ({ handleSearch }) => {
-//     const [query, setQuery] = useState('');
-//     const select = useSelector((state) => state.Favorites.data);
-
-
-//     const handleChange = (e) => {
-//         const query = e.target.value
-//         setQuery(query)
-//         const imgDescriptionSearch = select.filter(imagen => imagen.description.includes(query))
-//         handleSearch(imgDescriptionSearch)
-//     };
-
-//     return (
-//         <div>
-//             <input
-//                 className='home__content__input'
-//                 type="text"
-//                 placeholder='search your picture description......'
-//                 value={query}
-//                 onChange={handleChange}
-//             />
-//             <span
-//                 className="material-symbols-outlined home__content__icon"
-//                 onClick={() => handleSearch(query)}
-//             >
-//                 search
-//             </span>
-//         </div>
-//     );
-// };
 
 
 export const InputSearchDescriptionComponent = ({ handleSearch }) => {

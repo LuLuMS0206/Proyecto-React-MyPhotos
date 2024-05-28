@@ -90,6 +90,7 @@ export const ImgComponent = (props) => {
             likes: props.like,
             date: props.date,
             image: props.image,
+            description: props.description,
             id: props.id,
         }));
     };
