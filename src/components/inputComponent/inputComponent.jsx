@@ -27,16 +27,50 @@ export const InputSearchComponent = () => {
     );
 };
 
+// export const InputSearchDescriptionComponent = ({ handleSearch }) => {
+//     const [query, setQuery] = useState('');
+//     const select = useSelector((state) => state.Favorites.data);
+
+
+//     const handleChange = (e) => {
+//         const query = e.target.value
+//         setQuery(query)
+//         const imgDescriptionSearch = select.filter(imagen => imagen.description.includes(query))
+//         handleSearch(imgDescriptionSearch)
+//     };
+
+//     return (
+//         <div>
+//             <input
+//                 className='home__content__input'
+//                 type="text"
+//                 placeholder='search your picture description......'
+//                 value={query}
+//                 onChange={handleChange}
+//             />
+//             <span
+//                 className="material-symbols-outlined home__content__icon"
+//                 onClick={() => handleSearch(query)}
+//             >
+//                 search
+//             </span>
+//         </div>
+//     );
+// };
+
+
 export const InputSearchDescriptionComponent = ({ handleSearch }) => {
     const [query, setQuery] = useState('');
     const select = useSelector((state) => state.Favorites.data);
 
-
     const handleChange = (e) => {
-        const query = e.target.value
-        setQuery(query)
-        const imgDescriptionSearch = select.filter(imagen => imagen.description.includes(query))
-        handleSearch(imgDescriptionSearch)
+        const query = e.target.value.toLowerCase();
+        setQuery(query);
+        const imgDescriptionSearch = select.filter(imagen => {
+            const description = imagen.description || '';
+            return description.toLowerCase().includes(query);
+        });
+        handleSearch(imgDescriptionSearch);
     };
 
     return (
@@ -44,20 +78,22 @@ export const InputSearchDescriptionComponent = ({ handleSearch }) => {
             <input
                 className='home__content__input'
                 type="text"
-                placeholder='search your picture description......'
+                placeholder='Search your picture description...'
                 value={query}
                 onChange={handleChange}
             />
             <span
                 className="material-symbols-outlined home__content__icon"
-                onClick={() => handleSearch(query)}
+                onClick={() => {
+                    const imgDescriptionSearch = select.filter(imagen => {
+                        const description = imagen.description || '';
+                        return description.toLowerCase().includes(query);
+                    });
+                    handleSearch(imgDescriptionSearch);
+                }}
             >
                 search
             </span>
         </div>
     );
 };
-
-
-
-

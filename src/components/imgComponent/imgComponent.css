@@ -34,3 +34,21 @@ color: white;
 cursor: pointer;
 color: white;
 }
+
+.img__contentIcons__delete{
+    margin-left: 1rem;
+}
+
+.img__contentIcons__edit{
+    margin-left: 1rem;
+}
+
+.img__contentIcons__delete:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.img__contentIcons__edit:hover{
+    cursor: pointer;
+    color: white;
+}
