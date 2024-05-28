@@ -1,2 +1,22 @@
+.popup {
+    position: fixed;
+    height: 60vh;
+    width: 90%;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.855);
+    z-index: 1;
+    border-radius: 1rem;
+    padding: 1em;
+}
 
+.content__popup__icon {
+    text-align: center;
+}
 
+.close {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
