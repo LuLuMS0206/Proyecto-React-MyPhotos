@@ -13,11 +13,25 @@ export const FavoritesSlice = createSlice({
             localStorage.setItem('favorites', JSON.stringify(state.data));
         },
         removeFavorite: (state, action) => {
-            console.log(action.payload)
+            // console.log(image.id)
             state.data = state.data.filter(image => image.id !== action.payload);
             localStorage.setItem('favorites', JSON.stringify(state.data));
+            
+        },
+
+        descriptionEdit: (state, action) => {
+            state.data = state.data.map(edit => {
+                if (edit.id === action.payload.id) {
+                    edit.description = action.payload.description
+                    return edit
+                }
+            })
+            localStorage.setItem('favorites', JSON.stringify(state.data));
+            return state
         }
     }
+
+
 })
 
-export const { addFavorite, removeFavorite } = FavoritesSlice.actions;
+export const { addFavorite, removeFavorite, descriptionEdit } = FavoritesSlice.actions;

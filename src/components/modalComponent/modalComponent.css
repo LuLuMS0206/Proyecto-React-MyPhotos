@@ -12,6 +12,11 @@
     padding: 1em;
 }
 
+.popupInput{
+    width: 75%;
+    height: 6rem;
+}
+
 .content__popup__icon {
     text-align: center;
 }
