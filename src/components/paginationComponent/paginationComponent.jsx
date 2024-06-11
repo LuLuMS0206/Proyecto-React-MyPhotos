@@ -2,7 +2,7 @@
 import './paginationComponent.css';
 
 export const PaginationComponent = ({ currentPage, onPageChange }) => {
-    const totalPages = 5; // Mostrar solo las primeras 5 páginas para esta paginación
+    const totalPages = 5; 
 
     const handlePageClick = (pageNumber) => {
         onPageChange(pageNumber);
