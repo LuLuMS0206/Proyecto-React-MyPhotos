@@ -14,7 +14,7 @@ export const ModalComponent = ({ isOpen, onClose, sizeHeight, sizeWidth, like, d
                     <p><span className="material-symbols-outlined">height</span> {sizeHeight}</p>
                     <p><span className="material-symbols-outlined">width</span> {sizeWidth}</p>
                     <p><span className="material-symbols-outlined">calendar_month</span> {date}</p>
-                    <p>{date}</p>
+                    
                     
                     <input 
                         className="popupInput" 
@@ -22,7 +22,7 @@ export const ModalComponent = ({ isOpen, onClose, sizeHeight, sizeWidth, like, d
                         placeholder={description}
                         onChange={(e) => onDescriptionChange(e.target.value)}
                     />
-                <button>save</button>
+                <button className='popupButton'>save</button>
                 </div>
             </div>
         </dialog>
