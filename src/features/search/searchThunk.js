@@ -30,11 +30,12 @@
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
+
 export const SearchThunk = createAsyncThunk(
     'search/getsearch',
-    async (_, { rejectWithValue }) => {
+    async ({ page = 1 }, { rejectWithValue }) => {
         try {
-            const response = await fetch("https://api.unsplash.com/photos/?per_page=20", {
+            const response = await fetch(`https://api.unsplash.com/photos/?per_page=20&page=${page}`, {
                 headers: {
                     "Authorization": "Client-ID h9Uv1T3F_36nJcRw5hM0Wgeme8JVAHyJpx8zrMCuAew"
                 }
@@ -51,6 +52,7 @@ export const SearchThunk = createAsyncThunk(
         }
     }
 );
+
 
 export const searchPhotosThunk = createAsyncThunk(
     'search/getSearchResults',
