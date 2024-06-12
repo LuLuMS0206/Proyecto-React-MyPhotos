@@ -61,9 +61,9 @@ console.log(todasImagenes)
                                 key={imagen.id}
                                 id={imagen.id}
                                 image={imagen.image}
-                                sizeHeight={imagen.sizeHeight}
-                                sizeWidth={imagen.sizeWidth}
-                                like={imagen.like}
+                                sizeHeight={imagen.height}
+                                sizeWidth={imagen.width}
+                                like={imagen.likes}
                                 date={imagen.date}
                                 description={imagen.description}
                                 buttonSearch={false}

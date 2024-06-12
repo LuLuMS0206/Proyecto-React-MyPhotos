@@ -35,6 +35,7 @@ export const ImgComponent = (props) => {
         setIsModalOpen(false);
     };
 
+    console.log(props)
     return (
         <div>
             <img className="img__contentImage" src={props.image} alt="content" />
