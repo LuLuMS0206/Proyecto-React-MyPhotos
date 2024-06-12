@@ -9,11 +9,11 @@ export const ModalComponent = ({ isOpen, onClose, sizeHeight, sizeWidth, like, d
                 <span className="material-symbols-outlined close" onClick={onClose}>
                     close
                 </span>
-                <div className="content__popup__icon">
-                    <p><span className="material-symbols-outlined">favorite</span> {like}</p>
-                    <p><span className="material-symbols-outlined">height</span> {sizeHeight}</p>
-                    <p><span className="material-symbols-outlined">width</span> {sizeWidth}</p>
-                    <p><span className="material-symbols-outlined">calendar_month</span> {date}</p>
+                <div className="content__popup__icons">
+                    <p className='content__popup__icon'><span className="material-symbols-outlined">favorite</span> {like}</p>
+                    <p className='content__popup__icon'><span className="material-symbols-outlined">height</span> {sizeHeight}</p>
+                    <p className='content__popup__icon'><span className="material-symbols-outlined">width</span> {sizeWidth}</p>
+                    <p className='content__popup__icon'><span className="material-symbols-outlined">calendar_month</span> {date}</p>
                     
                     
                     <input 

@@ -36,6 +36,13 @@
 }
 
 .content__popup__icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.content__popup__icons {
     text-align: center;
 }
 
