@@ -1,6 +1,4 @@
 
-
-
 import { HeaderComponent } from "../components/headerComponent/headerComponent";
 import { NavLink } from "react-router-dom";
 import { ImgComponent } from '../components/imgComponent/imgComponent';
